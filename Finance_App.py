@@ -353,6 +353,10 @@ row3_col3.metric("CD Balance", f"${cdBalance:,.2f}")
 # ---------------------------
 # MONTHLY CASH FLOW
 # ---------------------------
+
+# Title
+st.subheader("Monthly Net Cash Flow")
+
 # Create a Month column as datetime (first day of the month)
 filtered_df["Month"] = filtered_df["Date"].dt.to_period("M").dt.to_timestamp()
 
@@ -380,8 +384,7 @@ monthly = monthly.sort_values("Month")
 fig_cashflow = px.bar(
     monthly,
     x="Month",
-    y="Net Cash Flow",
-    title="Monthly Net Cash Flow"
+    y="Net Cash Flow"
 )
 
 # Update x-axis to show MonthStr
