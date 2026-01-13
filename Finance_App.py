@@ -391,7 +391,7 @@ st.plotly_chart(fig_cashflow, use_container_width=True)
 # PNL BREAKDOWN
 # ---------------------------
 # Title
-st.subheader("PNL Breakdown")
+st.subheader("PNL Breakdown by Account and Transaction Type")
 
 # Create copy of filtered df for pivoting
 pivoted_source = filtered_df[filtered_df["PnL_flag"] == True].copy()
