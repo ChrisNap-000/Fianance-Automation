@@ -144,8 +144,8 @@ df = df_main.merge(df_lookup, how="left", on="Account Number")
 # ---------------------------
 
 # Convert blanks to nulls
-for i in columns.values():
-    df[i] = df[i].replace('', np.nan)
+for col in columns.values():
+    df[col] = df[col].replace('', np.nan)
 
 # Define Data Types
 data_types = {
